@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import { getFirestore } from 'firebase/firestore';
+import { getFirestore, collection, addDoc, getDocs, updateDoc, deleteDoc, doc } from 'firebase/firestore';
 
 const firebaseConfig = {
     apiKey: "AIzaSyCFaXewGdVczeBZvCo177-rTkQlgfID16E",
@@ -44,5 +44,53 @@ const signIn = async (email, password) => {
     }
 };
 
+// Firestore database operations
+const addUserProfile = async (userData) => {
+    try {
+        const docRef = await addDoc(collection(firestore, "users"), userData);
+        console.log("User profile added with ID: ", docRef.id);
+        return docRef.id;
+    } catch (error) {
+        console.error("Error adding user profile: ", error);
+        throw error;
+    }
+};
+
+const getUserProfiles = async () => {
+    try {
+        const querySnapshot = await getDocs(collection(firestore, "users"));
+        const users = [];
+        querySnapshot.forEach((doc) => {
+            users.push({ id: doc.id, ...doc.data() });
+        });
+        return users;
+    } catch (error) {
+        console.error("Error getting user profiles: ", error);
+        throw error;
+    }
+};
+
+const updateUserProfile = async (id, updatedData) => {
+    try {
+        const userRef = doc(firestore, "users", id);
+        await updateDoc(userRef, updatedData);
+        console.log("User profile updated: ", id);
+    } catch (error) {
+        console.error("Error updating user profile: ", error);
+        throw error;
+    }
+};
+
+const deleteUserProfile = async (id) => {
+    try {
+        const userRef = doc(firestore, "users", id);
+        await deleteDoc(userRef);
+        console.log("User profile deleted: ", id);
+    } catch (error) {
+        console.error("Error deleting user profile: ", error);
+        throw error;
+    }
+};
+
 // Export the Firebase services and authentication methods
-export { auth, firestore, signUp, signIn };
+export { auth, firestore, signUp, signIn, addUserProfile, getUserProfiles, updateUserProfile, deleteUserProfile };
