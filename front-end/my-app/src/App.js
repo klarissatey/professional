@@ -1,6 +1,6 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import "./App.css";
 
 // Placeholder components for different routes
 function Home() {
@@ -22,7 +22,9 @@ function SignUp() {
       <form>
         <input type="email" placeholder="Email" required />
         <input type="password" placeholder="Password" required />
-        <button type="submit" className="auth-button">Sign Up</button>
+        <button type="submit" className="auth-button">
+          Sign Up
+        </button>
       </form>
     </div>
   );
@@ -35,7 +37,9 @@ function SignIn() {
       <form>
         <input type="email" placeholder="Email" required />
         <input type="password" placeholder="Password" required />
-        <button type="submit" className="auth-button">Sign In</button>
+        <button type="submit" className="auth-button">
+          Sign In
+        </button>
       </form>
     </div>
   );
@@ -47,36 +51,42 @@ function App() {
       <div className="App">
         <nav className="navbar navbar-expand-lg">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="/">Mentorship App</Link>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav">
-                <li className="nav-item">
-                  <Link className="nav-link" to="/">Home</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/about">About</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/contact">Contact</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/signin">Sign In</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/signup">Sign Up</Link>
-                </li>
-              </ul>
+            <div className="logo-container">
+              <div className="logo-name">LOGO NAME</div>
+              <div className="logo-catchphrase">Logo phrase/catchphrase</div>
+            </div>
+            <div className="navbar-links">
+              <Link className="navbar-item" to="/about">
+                About
+              </Link>
+              <Link className="navbar-item" to="/contact">
+                Contact
+              </Link>
+              <Link className="navbar-item" to="/signin">
+                Sign In
+              </Link>
+              <Link className="navbar-item" to="/signup">
+                Sign Up
+              </Link>
             </div>
           </div>
         </nav>
 
         <header className="App-header">
-          <h1 className="header-title">Welcome to the Mentorship App</h1>
-          <p className="header-subtitle">Your journey to success starts here!</p>
-          <button className="cta-button">Get Started</button>
+          <div className="header-content">
+            <h1 className="header-title">Welcome to the Mentorship App</h1>
+            <p className="header-subtitle">
+              Your journey to success starts here!
+            </p>
+            <div className="auth-buttons">
+              <Link to="/signup/mentor">
+                <button className="cta-button">Sign up as a Mentor</button>
+              </Link>
+              <Link to="/signup/student">
+                <button className="cta-button">Sign up as a Student</button>
+              </Link>
+            </div>
+          </div>
         </header>
 
         <Routes>
