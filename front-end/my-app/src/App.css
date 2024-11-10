@@ -135,3 +135,7 @@
 .auth-button:hover {
   background-color: #4eaed3;
 }
+
+body {
+  background-color: #000000;
+}
