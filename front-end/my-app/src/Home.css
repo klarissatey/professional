@@ -1,19 +1,29 @@
-/* front-end/my-app/src/Home.css */
+/* Home.css */
+
 .home-container {
-  text-align: center;
-  padding: 50px;
-}
-
-.get-started-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.get-started-button:hover {
-  background-color: #0056b3;
-}
+    text-align: center;
+    padding: 50px;
+    animation: fadeIn 1.5s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  .get-started-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4eaed3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .get-started-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
