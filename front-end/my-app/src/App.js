@@ -34,6 +34,9 @@ function App() {
                 <li className="nav-item">
                   <Link className="nav-link" to="/signup">Resources</Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/signup">Chat With Our Mentors</Link>
+                </li>
               </ul>
             </div>
           </div>
