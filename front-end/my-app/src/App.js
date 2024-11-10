@@ -1,45 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Home from './Home'; // Assuming you have a Home component
+import MentorMatch from './MentorMatch'; // Import the MentorMatch component
 import './App.css';
-
-// Placeholder components for different routes
-function Home() {
-  return <h2>Home Page</h2>;
-}
-
-function About() {
-  return <h2>About Page</h2>;
-}
-
-function Contact() {
-  return <h2>Contact Page</h2>;
-}
-
-function SignUp() {
-  return (
-    <div className="auth-container">
-      <h2>Sign Up</h2>
-      <form>
-        <input type="email" placeholder="Email" required />
-        <input type="password" placeholder="Password" required />
-        <button type="submit" className="auth-button">Sign Up</button>
-      </form>
-    </div>
-  );
-}
-
-function SignIn() {
-  return (
-    <div className="auth-container">
-      <h2>Sign In</h2>
-      <form>
-        <input type="email" placeholder="Email" required />
-        <input type="password" placeholder="Password" required />
-        <button type="submit" className="auth-button">Sign In</button>
-      </form>
-    </div>
-  );
-}
 
 function App() {
   return (
@@ -47,7 +10,7 @@ function App() {
       <div className="App">
         <nav className="navbar navbar-expand-lg">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="/">Mentorship App</Link>
+            <Link className="navbar-brand" to="/">PFP</Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -74,17 +37,16 @@ function App() {
         </nav>
 
         <header className="App-header">
-          <h1 className="header-title">Welcome to the Mentorship App</h1>
+          <h1 className="header-title">Welcome to PierForPeers</h1>
           <p className="header-subtitle">Your journey to success starts here!</p>
-          <button className="cta-button">Get Started</button>
+          <Link to="/mentor-match">
+            <button className="cta-button">Find your mentor!</button>
+          </Link>
         </header>
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="/mentor-match" element={<MentorMatch />} />
         </Routes>
       </div>
     </Router>

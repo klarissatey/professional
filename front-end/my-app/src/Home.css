@@ -1,0 +1,19 @@
+/* front-end/my-app/src/Home.css */
+.home-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.get-started-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.get-started-button:hover {
+  background-color: #0056b3;
+}

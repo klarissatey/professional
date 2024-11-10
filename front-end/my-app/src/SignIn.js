@@ -7,7 +7,24 @@ function SignIn() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Sign In:", { email, password });
-    // Add sign-in logic here
+    sendUserDataToDatabase({ email, password });
+  };
+
+  const sendUserDataToDatabase = (userData) => {
+    fetch('/api/signin', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(userData),
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
   };
 
   return (
