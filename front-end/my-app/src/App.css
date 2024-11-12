@@ -68,14 +68,24 @@
   font-weight: bold;
   color: #333;
   margin: 0.5rem 0;
+  text-align: right;
+  position: relative;
+  right: 25%
 }
 
 .header-subtitle {
+  /* font-size: 1.5rem;
+  color: #666;
+  margin: 0.5rem 0 2rem 0;
+  max-width: 600px;
+  text-align: left; */
   font-size: 1.5rem;
   color: #666;
   margin: 0.5rem 0 2rem 0;
   max-width: 600px;
-  text-align: center;
+  text-align: right;
+  position: relative;
+  right: 25%;
 }
 
 /* CTA Button */

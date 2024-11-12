@@ -26,8 +26,8 @@ function MainContent() {
       {/* Render header only on the Home ("/") route */}
       {location.pathname === '/' && (
         <header className="App-header">
-          <h1 className="header-title">Welcome to PierForPeers</h1>
-          <p className="header-subtitle">Your journey to success starts here!</p>
+          <h1 className="header-title">Welcome to Anchor</h1>
+          <p className="header-subtitle">A platform meant for connecting!</p>
           <Link to="/mentor-match">
             <button className="cta-button">Find your mentor!</button>
           </Link>
