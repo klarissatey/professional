@@ -18,6 +18,8 @@ function MainContent() {
           <Link className="navbar-item" to="/contact">Contact</Link>
           <Link className="navbar-item" to="/signin">Sign In</Link>
           <Link className="navbar-item" to="/signup">Sign Up</Link>
+          <Link className="navbar-item" to="/signup">Resources</Link>
+          <Link className="navbar-item" to="/signup">Our Community</Link>
         </div>
       </nav>
 
