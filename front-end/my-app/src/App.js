@@ -23,16 +23,42 @@ function MainContent() {
         </div>
       </nav>
 
+      
       {/* Render header only on the Home ("/") route */}
+      
       {location.pathname === '/' && (
         <header className="App-header">
           <h1 className="header-title">Welcome to Anchor</h1>
-          <p className="header-subtitle">A platform meant for connecting!</p>
-          <Link to="/mentor-match">
+          <h1 className="header-title">A platform meant for</h1>
+          <h1 className="header-title">connecting!</h1>
+          {/* <Link to="/mentor-match">
             <button className="cta-button">Find your mentor!</button>
-          </Link>
+          </Link> */}
+
+          <div className="box">
+      <h1>First Time User?</h1>
+      <div className="buttons">
+        <button className="student-signup">Student Sign-Up</button>
+        <button className="mentor-signup">Mentor Sign-Up</button>
+      </div>
+    </div>
         </header>
+
+
+        
       )}
+
+      {/* Blue Box on the Right Side */}
+      {/* <div class="box">
+    <p>Blah blah blah blah blah</p>
+    <div class="buttons">
+      <button class="student-signup">Student Sign-Up</button>
+      <button class="mentor-signup">Mentor Sign-Up</button>
+    </div>
+  </div>  */}
+      
+
+
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -47,6 +73,7 @@ function MainContent() {
 function App() {
   return (
     <Router>
+
       <MainContent />
     </Router>
   );
