@@ -47,15 +47,6 @@ function MainContent() {
 
         
       )}
-
-      {/* Blue Box on the Right Side */}
-      {/* <div class="box">
-    <p>Blah blah blah blah blah</p>
-    <div class="buttons">
-      <button class="student-signup">Student Sign-Up</button>
-      <button class="mentor-signup">Mentor Sign-Up</button>
-    </div>
-  </div>  */}
       
 
 

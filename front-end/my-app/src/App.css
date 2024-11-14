@@ -53,7 +53,8 @@
 
 /* Header Styles */
 .App-header {
-  background-color: #9cc0f0f3;
+  /* background-color: #9cc0f0f3; */
+  background: linear-gradient(180deg, #F4F4F9 0%, #C2CFD6 50%, #586F7C 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -148,7 +149,7 @@ body {
 }
 
 .box {
-  background-color: #1c2d4e;
+  background-color: #2F4550;;
   padding: 100px;
   border-radius: 8px;
   color: white;
