@@ -5,6 +5,7 @@ import MentorMatch from './MentorMatch';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 import './App.css';
+import logo from './anchor.png';
 
 function MainContent() {
   const location = useLocation();
@@ -12,14 +13,18 @@ function MainContent() {
   return (
     <div className="App">
       <nav className="navbar">
-        <Link className="navbar-brand" to="/">PFP</Link>
-        <div>
+        <Link className="navbar-brand" to="/">
+          <img src={logo} alt="anchor" className="navbar-logo"></img>
+          Anchor
+        </Link>
+        <div className="navbar-item-container">
           <Link className="navbar-item" to="/about">About</Link>
-          <Link className="navbar-item" to="/contact">Contact</Link>
-          <Link className="navbar-item" to="/signin">Sign In</Link>
-          <Link className="navbar-item" to="/signup">Sign Up</Link>
-          <Link className="navbar-item" to="/signup">Resources</Link>
-          <Link className="navbar-item" to="/signup">Our Community</Link>
+          <Link className="navbar-item" to="/contact">Resources</Link>
+          <Link className="navbar-item" to="/signin">Mentors</Link>
+          <Link className="navbar-item" to="/signup">Profile</Link>
+          <Link className="navbar-item" to="/signup">Connect</Link>
+          <button className="navbar-item button-signup" type="button">Sign Up</button>
+          <button className="navbar-item button-login">Log In</button>
         </div>
       </nav>
 
