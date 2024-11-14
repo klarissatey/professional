@@ -6,7 +6,7 @@
 
 /* Navbar Styles */
 .navbar {
-  background-color: #fff;
+  background: #586F7C;
   padding: 0.8rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -19,18 +19,67 @@
   transition: background-color 0.3s ease;
 }
 
+.navbar-item-container {
+  background: #91a1a9;
+  padding: 1rem .5rem 1rem 1rem; 
+  margin-right: 2%;
+  border-radius: 10px;
+}
+
 .navbar-item {
-  color: #333;
-  font-weight: 500;
+  /* color: #333; */
+  /* font-weight: 500;
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease; */
+  color: #FFF;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Manrope;
+  font-size: 1.5vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 48px */
+  letter-spacing: -0.64px;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 1rem; 
 }
 
 .navbar-item:hover {
   color: #fff;
   background-color: #61dafb;
+}
+
+.navbar-brand {
+  color: #FFF;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: "Anonymous Pro";
+  font-size: 3vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 105px */
+  letter-spacing: -1.4px;
+  /* align-items: center; */
+}
+
+.navbar-logo {
+  height: 4vw;
+  transform: rotate(-30deg);
+  /* flex-shrink: 0; */
+}
+
+.button-signup {
+  border-radius: 12px;
+  border: 2px solid #2F4550;
+  background: #F4F4F9;
+  padding: 0.5rem 1rem;
+}
+
+.button-login {
+  border-radius: 12px;
+  border: 2px solid #FFF;
+  background: #2F4550;
+  padding: 0.5rem 1rem;
 }
 
 /* Logo Styles */
@@ -44,6 +93,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   color: #333;
+  color: #FFF;
 }
 
 .logo-catchphrase {
