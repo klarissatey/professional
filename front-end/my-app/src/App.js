@@ -30,16 +30,33 @@ function MainContent() {
         </div>
       </nav>
 
+      
       {/* Render header only on the Home ("/") route */}
+      
       {location.pathname === '/' && (
         <header className="App-header">
-          <h1 className="header-title">Welcome to PierForPeers</h1>
-          <p className="header-subtitle">Your journey to success starts here!</p>
-          <Link to="/mentor-match">
+          <h1 className="header-title">Welcome to Anchor</h1>
+          <h1 className="header-title">A platform meant for</h1>
+          <h1 className="header-title">connecting!</h1>
+          {/* <Link to="/mentor-match">
             <button className="cta-button">Find your mentor!</button>
-          </Link>
+          </Link> */}
+
+          <div className="box">
+      <h1>First Time User?</h1>
+      <div className="buttons">
+        <button className="student-signup">Student Sign-Up</button>
+        <button className="mentor-signup">Mentor Sign-Up</button>
+      </div>
+    </div>
         </header>
+
+
+        
       )}
+      
+
+
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -54,6 +71,7 @@ function MainContent() {
 function App() {
   return (
     <Router>
+
       <MainContent />
     </Router>
   );

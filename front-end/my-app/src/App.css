@@ -1,7 +1,7 @@
 /* Global App Styles */
 .App {
   text-align: center;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+  font: Manrope;
 }
 
 /* Navbar Styles */
@@ -111,6 +111,7 @@
 /* Header Styles */
 .App-header {
   background-color: #417087;
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -121,10 +122,15 @@
 }
 
 .header-title {
-  font-size: 3rem;
+  
+  font-size: 3.8rem;
   font-weight: bold;
-  color: #333;
+  color: #2F4550;
   margin: 0.5rem 0;
+  text-align: right;
+  position: relative;
+  right: 25%;
+  font: Manrope;
 }
 
 .header-subtitle {
@@ -132,7 +138,9 @@
   color: #666;
   margin: 0.5rem 0 2rem 0;
   max-width: 600px;
-  text-align: center;
+  text-align: right;
+  position: relative;
+  right: 25%;
 }
 
 /* CTA Button */
@@ -195,4 +203,40 @@
 
 body {
   background-color: #000000;
+}
+
+.box {
+  background-color: #2F4550;;
+  padding: 100px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  
+  position: relative;
+  margin-top: -300px;
+  margin-left: 700px;
+
+}
+
+/* Buttons inside the navy blue box */
+.buttons {
+  margin-top: 40px;
+}
+
+.student-signup, .mentor-signup {
+  background-color: #f0f0f0;
+  color: #1c2d4e;
+  border: none;
+  padding: 30px 50px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-left: 30px;
+  margin-bottom: -10 px;
+  font-family: Manrope;
+}
+
+.student-signup:hover, .mentor-signup:hover {
+  background-color: #d0d0d0;
 }
