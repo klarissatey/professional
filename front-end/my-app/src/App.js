@@ -15,16 +15,18 @@ function MainContent() {
       <nav className="navbar">
         <Link className="navbar-brand" to="/">
           <img src={logo} alt="anchor" className="navbar-logo"></img>
-          Anchor
+          Pier
         </Link>
-        <div className="navbar-item-container">
+        <div className="navbar-items-container">
           <Link className="navbar-item" to="/about">About</Link>
           <Link className="navbar-item" to="/contact">Resources</Link>
           <Link className="navbar-item" to="/signin">Mentors</Link>
-          <Link className="navbar-item" to="/signup">Profile</Link>
           <Link className="navbar-item" to="/signup">Connect</Link>
-          <button className="navbar-item button-signup" type="button">Sign Up</button>
-          <button className="navbar-item button-login">Log In</button>
+          <Link className="navbar-item" to="/signup">Profile</Link>
+        </div>
+        <div>
+          <button className="navbar-item button-signup" type="button" to="/signup">Sign Up</button>
+          <button className="navbar-item button-login" type="button" to="/signin">Log In</button>
         </div>
       </nav>
 
