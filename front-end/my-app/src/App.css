@@ -6,7 +6,7 @@
 
 /* Navbar Styles */
 .navbar {
-  background: #586F7C;
+  background: #417087;
   padding: 0.8rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -19,28 +19,25 @@
   transition: background-color 0.3s ease;
 }
 
-.navbar-item-container {
-  background: #91a1a9;
+.navbar-items-container {
   padding: 1rem .5rem 1rem 1rem; 
-  margin-right: 2%;
+  /* margin-right: 2%; */
   border-radius: 10px;
+  margin: auto;
+  
+
 }
 
 .navbar-item {
-  /* color: #333; */
-  /* font-weight: 500;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  transition: color 0.3s ease, background-color 0.3s ease; */
+  transition: color 0.3s ease, background-color 0.3s ease; 
   color: #FFF;
   font-feature-settings: 'liga' off, 'clig' off;
   font-family: Manrope;
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   font-style: normal;
   font-weight: 700;
-  line-height: 150%; /* 48px */
-  letter-spacing: -0.64px;
+  line-height: 150%; /* 36px */
+  letter-spacing: -0.48px;
   padding: 0.5rem 1rem;
   margin: 0.5rem 1rem; 
 }
@@ -52,13 +49,14 @@
 
 .navbar-brand {
   color: #FFF;
+  text-align: center;
   font-feature-settings: 'liga' off, 'clig' off;
-  font-family: "Anonymous Pro";
-  font-size: 3vw;
+  font-family: Roboto;
+  font-size: 4vw;
   font-style: normal;
   font-weight: 700;
-  line-height: 150%; /* 105px */
-  letter-spacing: -1.4px;
+  line-height: 150%; /* 129.183px */
+  letter-spacing: -1.722px;
   /* align-items: center; */
 }
 
@@ -69,17 +67,26 @@
 }
 
 .button-signup {
+  color: #417087;
   border-radius: 12px;
-  border: 2px solid #2F4550;
+  border: 2px solid #417087;
   background: #F4F4F9;
-  padding: 0.5rem 1rem;
+  /* padding: 0.5rem 1.2rem; */
+
+  width: 8rem;
+  height: 3.75rem;
+  flex-shrink: 0;
 }
 
 .button-login {
   border-radius: 12px;
   border: 2px solid #FFF;
-  background: #2F4550;
-  padding: 0.5rem 1rem;
+  background: #417087;
+  /* padding: 0.4rem 1.3rem; */
+
+  width: 8rem;
+  height: 3.75rem;
+  flex-shrink: 0;
 }
 
 /* Logo Styles */
@@ -103,7 +110,7 @@
 
 /* Header Styles */
 .App-header {
-  background-color: #9cc0f0f3;
+  background-color: #417087;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
