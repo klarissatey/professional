@@ -23,7 +23,7 @@ function MainContent() {
           <Link className="navbar-item" to="/signin">Mentors</Link>
           <Link className="navbar-item" to="/signup">Profile</Link>
           <Link className="navbar-item" to="/signup">Connect</Link>
-          <Link className="navbar-item" to = "/resources">Resources</Link>
+          <Link className="navbar-item" to = "/resources">Resources</Link> 
           <button className="navbar-item button-signup" type="button">Sign Up</button>
           <button className="navbar-item button-login">Log In</button>
         </div>
