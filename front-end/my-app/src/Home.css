@@ -1,17 +1,74 @@
 /* Home.css */
 
-.home-container {
+  .home-container {
     text-align: center;
     padding: 50px;
     animation: fadeIn 1.5s ease-in;
     background-color: #417087;
+    width: 100%;
   }
   
   @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(-20px); }
     100% { opacity: 1; transform: translateY(0); }
   }
+
+  .slogan {
+    color: #FFF;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Manrope;
+    font-size: 4.2rem;
+    font-style: normal;
+    /* font-weight: 800; */
+    line-height: 150%; /* 6.801rem */
+    letter-spacing: -0.09069rem;
+    padding-top: 8vw;
+  }
   
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    text-align: center;
+    padding: 50px;
+    animation: fadeIn 1.5s ease-in;
+    background-color: #ffffff; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow effect */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    margin-top: 3vw;
+  }
+
+  .home-quote {
+    color: #575757;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Manrope;
+    font-size: 1.7rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 3.75rem */
+    letter-spacing: -0.05rem;
+    padding: 2rem 9rem 2rem 9rem;
+  }
+
+  .home-link {
+    color: #575757;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Manrope;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 327;
+    line-height: 150%; /* 3.75rem */
+    letter-spacing: -0.05rem;
+  }
+
+  .logo {
+    color: pink;
+  }
+
   .get-started-button {
     padding: 10px 20px;
     font-size: 16px;
@@ -26,5 +83,32 @@
   .get-started-button:hover {
     background-color: #0056b3;
     transform: scale(1.05);
+  }
+
+  .button-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 30vw; 
+    margin-top: 20px; 
+  }
+
+  .home-button-signup {
+    /* display: inline-block; */
+    background-color: #417087; 
+    color: #ffffff; 
+    padding: 23px 20px; /* Inner spacing for the button */
+    font-size: 2rem; /* Font size for the button text */
+    border: none; /* Removes default button border */
+    border-radius: 8px; /* Adds rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* cursor: pointer; 
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    color: #FFF;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Manrope;
+    font-style: normal;
+    line-height: 150%; 
+    letter-spacing: -0.0425rem; */
   }
   
