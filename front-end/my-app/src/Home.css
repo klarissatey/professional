@@ -3,7 +3,6 @@
   .home-container {
     text-align: center;
     padding: 50px;
-    animation: fadeIn 1.5s ease-in;
     background-color: #417087;
     width: 100%;
   }
