@@ -4,8 +4,11 @@ import Home from './Home';
 import MentorMatch from './MentorMatch';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
+import Profile from './Profile';
 import './App.css';
 import logo from './anchor.png';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 
 function MainContent() {
   const location = useLocation();
@@ -21,7 +24,7 @@ function MainContent() {
           <Link className="navbar-item" to="/about">About</Link>
           <Link className="navbar-item" to="/contact">Resources</Link>
           <Link className="navbar-item" to="/signin">Mentors</Link>
-          <Link className="navbar-item" to="/signup">Profile</Link>
+          <Link className="navbar-item" to="/profile">Profile</Link>
           <Link className="navbar-item" to="/signup">Connect</Link>
           <Link className="navbar-item" to = "/resources">Resources</Link> 
           <button className="navbar-item button-signup" type="button">Sign Up</button>
@@ -62,6 +65,7 @@ function MainContent() {
         <Route path="/mentor-match" element={<MentorMatch />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </div>
   );
