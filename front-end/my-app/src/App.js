@@ -8,7 +8,7 @@ import Profile from './Profile';
 import './App.css';
 import logo from './anchor.png';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-
+import Resources from './Resources';
 
 function MainContent() {
   const location = useLocation();
@@ -22,11 +22,10 @@ function MainContent() {
         </Link>
         <div className="navbar-item-container">
           <Link className="navbar-item" to="/about">About</Link>
-          <Link className="navbar-item" to="/contact">Resources</Link>
+          <Link className="navbar-item" to="/resources">Resources</Link>
           <Link className="navbar-item" to="/signin">Mentors</Link>
           <Link className="navbar-item" to="/profile">Profile</Link>
           <Link className="navbar-item" to="/signup">Connect</Link>
-          <Link className="navbar-item" to = "/resources">Resources</Link> 
           <button className="navbar-item button-signup" type="button">Sign Up</button>
           <button className="navbar-item button-login">Log In</button>
         </div>
@@ -66,6 +65,7 @@ function MainContent() {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/resources" element={<Resources />} />
       </Routes>
     </div>
   );
