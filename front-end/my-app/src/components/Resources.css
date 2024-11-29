@@ -1,6 +1,7 @@
 /* General Styling */
 body {
     margin: 0;
+    background-color: #417087; 
     padding: 0;
     font-family: 'Manrope', sans-serif;
     overflow-y: scroll; /* Allow vertical scrolling */
@@ -32,6 +33,7 @@ body {
     line-height: 150%; /* 96px */
     letter-spacing: -1.28px;
     text-decoration-line: underline;
+    background-color: #417087; 
   }
   
   /* Card Styling */
@@ -88,7 +90,25 @@ body {
     letter-spacing: -0.8px;
     text-decoration-line: underline;
     margin-top: 10px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline: none;
+    background-color: transparent;
+    outline: none; 
+    background-image: none;
   }
+
+  .descriptor:hover {
+    color: #417087;
+    transform: scale(1.05);
+  }
+
+  .descriptor:focus {
+    border: none;
+}
 
   .descriptor-1 {
     width: 100%; /* Adjust to fit within its container */
@@ -103,6 +123,25 @@ body {
     line-height: 150%;
     letter-spacing: -0.8px;
     text-decoration-line: underline;
-    margin-top: -50px;
+    margin-top: -80px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline: none;
+    background-color: transparent;
+    outline: none; 
+    background-image: none;
   }
+
+
+  .descriptor-1:hover {
+    color: #417087;
+    transform: scale(1.05);
+  }
+
+  .descriptor-1:focus {
+    border: none;
+}
   

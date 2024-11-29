@@ -8,7 +8,7 @@ import Profile from './Profile';
 import './App.css';
 import logo from './anchor.png';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import Resources from './Resources';
+import Resources from './components/Resources';
 
 function MainContent() {
   const location = useLocation();
@@ -65,7 +65,7 @@ function MainContent() {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/resources" element={<Resources />} />
+        <Route path="/resources/*" element={<Resources />} /> 
       </Routes>
     </div>
   );
