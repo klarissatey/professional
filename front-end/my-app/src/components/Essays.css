@@ -7,10 +7,13 @@
     color: white;
     height: 100vh; /* Full viewport height */
     margin: 0;
+    padding-top: 20px;
   }
   
   /* Title styling */
   .essay-title {
+    margin: 0; /* Remove default margins */
+    padding-bottom: 10px;
     color: #5F6368;
 font-feature-settings: 'liga' off, 'clig' off;
 font-family: Manrope;
@@ -41,7 +44,7 @@ text-underline-position: from-font;
     align-items: center;
     border-top-left-radius: 15px;
 border-top-right-radius: 15px;
-margin-bottom: -20px;
+
   }
   
   /* Content grid container centered on the page */
@@ -58,7 +61,7 @@ margin-bottom: -20px;
     gap: 20px;
     border-bottom-left-radius: 15px;
 border-bottom-right-radius: 15px;
-margin-bottom: -175px;
+margin-bottom: -150px;
   }
 
   .essay-icon-1 {

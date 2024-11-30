@@ -13,7 +13,7 @@ function Essays() {
     // </div>
     <div className="essays-container">
       <div className = "holder-for-title">
-      <h1 className="essay-title">External Resources</h1>
+      <h1 className="essay-title">Essays</h1>
       </div>
 
       <div className="essays-content">
