@@ -1,0 +1,84 @@
+.essays-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #417087; /* Matches your previous Resources page background */
+    color: white;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+  }
+  
+  /* Title styling */
+  .essay-title {
+    color: #5F6368;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Manrope;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 60px */
+letter-spacing: -0.8px;
+text-decoration-line: underline;
+text-decoration-style: solid;
+text-decoration-skip-ink: auto;
+text-decoration-thickness: auto;
+text-underline-offset: auto;
+text-underline-position: from-font;
+
+  }
+  .holder-for-title {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: white; /* White background for the box */
+    padding: 20px; /* Padding inside the box */
+    /* border-radius: 15px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  */
+    max-width: 1200px;
+    width: 90%; /* Adjust width as needed */
+    gap: 20px;
+    align-items: center;
+    border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+margin-bottom: -20px;
+  }
+  
+  /* Content grid container centered on the page */
+  .essays-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: white; /* White background for the box */
+    padding: 20px; /* Padding inside the box */
+    /* border-radius: 15px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  */
+    max-width: 1200px;
+    width: 90%; /* Adjust width as needed */
+    gap: 20px;
+    border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
+margin-bottom: -175px;
+  }
+
+  .essay-icon-1 {
+    font-size: 100px; /* Large size for the icon */
+    color: #000000; /* Teal color to match the design */
+    width: 207px;
+height: 207px;
+flex-shrink: 0;
+margin:auto;
+  }
+
+  .essay-name {
+    color: #000;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Manrope;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 30px */
+letter-spacing: -0.4px;
+margin-top: -20px;
+  }
+  
