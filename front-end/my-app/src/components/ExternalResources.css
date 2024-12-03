@@ -1,0 +1,97 @@
+/* Container styling */
+.external-resources-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #417087; 
+    color: white;
+    height: 100vh; 
+    margin: 0;
+  }
+  
+  /* Title styling */
+  .external-resources-title {
+    color: #5F6368;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Manrope;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 60px */
+letter-spacing: -0.8px;
+text-decoration-line: underline;
+text-decoration-style: solid;
+text-decoration-skip-ink: auto;
+text-decoration-thickness: auto;
+text-underline-offset: auto;
+text-underline-position: from-font;
+
+  }
+  .holder-for-title {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: white; /* White background for the box */
+    padding: 20px; /* Padding inside the box */
+    /* border-radius: 15px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  */
+    max-width: 1200px;
+    width: 90%; 
+    align-items: center;
+    border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+margin-top: -350px;
+  }
+  
+  /* Content grid container centered on the page */
+  .external-resources-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: white; /* White background for the box */
+    padding: 20px; /* Padding inside the box */
+    /* border-radius: 15px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  */
+    max-width: 1200px;
+    width: 90%; /* Adjust width as needed */
+    gap: 20px;
+    border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
+  }
+  
+  /* Individual resource card */
+  .resource-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+  }
+  
+  .resource-image {
+    width: 391px;
+    height: 169px;
+    flex-shrink: 0;
+  }
+  
+  .resource-description {
+    color: #5F6368;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Manrope;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 60px */
+letter-spacing: -0.8px;
+text-decoration-line: underline;
+text-decoration-style: solid;
+text-decoration-skip-ink: auto;
+text-decoration-thickness: auto;
+text-underline-offset: auto;
+text-underline-position: from-font;
+  }
+  

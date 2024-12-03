@@ -5,8 +5,6 @@ import MentorMatch from './MentorMatch';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 
-import './App.css';
-
 function MainContent() {
   const location = useLocation();
 
@@ -27,7 +25,7 @@ function MainContent() {
         </Link>
         <div className="navbar-items-container">
           <Link className="navbar-item" to="/about">About</Link>
-          <Link className="navbar-item" to="/contact">Resources</Link>
+          <Link className="navbar-item" to="/resources">Resources</Link>
           <Link className="navbar-item" to="/signin">Mentors</Link>
           <Link className="navbar-item" to="/signup">Connect</Link>
           <Link className="navbar-item" to="/signup">Profile</Link>
@@ -42,6 +40,8 @@ function MainContent() {
         <Route path="/mentor-match" element={<MentorMatch />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/resources/*" element={<Resources />} /> 
       </Routes>
     </div>
   );
