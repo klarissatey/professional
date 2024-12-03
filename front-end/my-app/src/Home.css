@@ -27,4 +27,147 @@
     background-color: #0056b3;
     transform: scale(1.05);
   }
+
+/* Global App Styles */
+.App {
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #fff;
+  padding: 0.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-item {
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-item:hover {
+  color: #fff;
+  background-color: #61dafb;
+}
+
+/* Logo Styles */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.logo-catchphrase {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Header Styles */
+.App-header {
+  background-color: #9cc0f0f3;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin-top: 4rem; /* For navbar offset */
+}
+
+.header-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.header-subtitle {
+  font-size: 1.5rem;
+  color: #666;
+  margin: 0.5rem 0 2rem 0;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* CTA Button */
+.cta-button {
+  background-color: #61dafb;
+  color: #282c34;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #4eaed3;
+  transform: scale(1.05);
+}
+
+/* Auth Container Styles */
+.auth-container {
+  max-width: 400px;
+  margin: 5rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.auth-container h2 {
+  color: #282c34;
+  margin-bottom: 1.5rem;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #61dafb;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: #4eaed3;
+}
+
+body {
+  background-color: #000000;
+}
+
   

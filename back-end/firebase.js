@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import { getFirestore, collection, addDoc, getDocs, updateDoc, deleteDoc, doc } from 'firebase/firestore';
+import { getFirestore, collection, addDoc, getDocs, updateDoc, deleteDoc, doc, setDoc } from 'firebase/firestore';
 
 const firebaseConfig = {
     apiKey: "AIzaSyCFaXewGdVczeBZvCo177-rTkQlgfID16E",
@@ -13,11 +13,18 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 
 // Initialize Firebase services
-const auth = getAuth(app);
-const firestore = getFirestore(app);
+const auth = getAuth();
+const db = getFirestore();
+export {auth, db};
+
+async function addTestData () {
+    await setDoc(doc(db, "testCollection", "testDoc"), {name: "Test", value: 123});
+    console.log("document added");
+}
+addTestData();
 
 // User authentication methods
 const signUp = async (email, password) => {
