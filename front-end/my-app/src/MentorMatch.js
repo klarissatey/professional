@@ -1,75 +1,112 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Box, Button, Flex, Heading, Text, IconButton } from '@chakra-ui/react';
+import { StarIcon } from '@chakra-ui/icons';
 
 const mentorsData = [
-  { id: 1, name: 'Alice', university: 'NYU', major: 'Computer Science', age: 21, interests: ['AI', 'Web Development'], mentorshipNeeded: 'career guidance' },
-  { id: 2, name: 'Bob', university: 'UCLA', major: 'Mathematics', age: 23, interests: ['Data Science', 'Statistics'], mentorshipNeeded: 'technical skills' },
-  // Add more dummy mentor data as needed
+  { id: 1, name: 'Alice', university: 'UT Austin', major: 'Computer Science', age: 22, interests: ['AI', 'Web Development'], mentorshipNeeded: 'career guidance' },
+  { id: 2, name: 'Bob', university: 'UT Austin', major: 'Business', age: 24, interests: ['Consulting', 'Business Analytics'], mentorshipNeeded: 'Case Prep' },
+  { id: 3, name: 'Charlie', university: 'Stanford', major: 'Computer Science', age: 21, interests: ['Machine Learning', 'Data Science'], mentorshipNeeded: 'career guidance' },
+  { id: 4, name: 'Dana', university: 'UCLA', major: 'Mechanical Engineering', age: 23, interests: ['CAD', 'Product Design'], mentorshipNeeded: 'career guidance' },
+  { id: 5, name: 'Eve', university: 'UC Berkeley', major: 'Mathematics', age: 25, interests: ['Statistics', 'Cryptography'], mentorshipNeeded: 'research guidance' },
 ];
 
 function MentorMatch() {
   const [formData, setFormData] = useState({ university: '', major: '', age: '', interests: '', mentorshipNeeded: '' });
   const [matches, setMatches] = useState([]);
+  const [starredMentors, setStarredMentors] = useState({});
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+  useEffect(() => {
+    // Retrieve form data from localStorage
+    const storedData = localStorage.getItem('mentorMatchData');
+    if (storedData) {
+      const parsedData = JSON.parse(storedData);
+      setFormData(parsedData);
+      findMatches(parsedData); // Find matches based on the retrieved data
+    }
+  }, []);
 
-  const findMatches = () => {
-    const interestsArray = formData.interests.split(',').map(interest => interest.trim());
+  const findMatches = (data) => {
+    const interestsArray = data.interests.split(',').map(interest => interest.trim());
 
-    const matchedMentors = mentorsData.filter(mentor => {
+    const matchedMentors = mentorsData.map(mentor => {
       let score = 0;
-      if (mentor.university === formData.university) score++;
-      if (mentor.major === formData.major) score++;
-      if (Math.abs(mentor.age - parseInt(formData.age)) <= 2) score++;
+      if (mentor.university === data.university) score++;
+      if (mentor.major === data.major) score++;
+      if (Math.abs(mentor.age - parseInt(data.age)) <= 2) score++;
       score += mentor.interests.filter(interest => interestsArray.includes(interest)).length;
-      return score >= 3; // Match threshold can be adjusted
-    });
+      if (mentor.mentorshipNeeded === data.mentorshipNeeded) score++;
+      const similarityScore = Math.min(Math.floor((score / 5) * 100), 100); // Calculate similarity score as a percentage
+      return { ...mentor, similarityScore };
+    }).filter(mentor => mentor.similarityScore >= 50); // Only include mentors with a similarity score >= 60
 
-    console.log('Matched Mentors:', matchedMentors); // Debugging line
     setMatches(matchedMentors);
   };
 
+  const toggleStarred = (id) => {
+    setStarredMentors(prevState => ({
+      ...prevState,
+      [id]: !prevState[id],
+    }));
+  };
+
   return (
-    <div style={{ padding: '24px', backgroundColor: '#e9f5ff', borderRadius: '10px', boxShadow: 'lg' }}>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-        <div style={{ padding: '50px', border: '1px solid', borderRadius: '8px', backgroundColor: 'white', boxShadow: 'md' }}>
-          <h2 style={{ color: '#333', marginBottom: '16px' }}>Find Your Mentor</h2>
-          <div style={{ color: '#555' }}>
-            <input name="university" placeholder="University" onChange={handleChange} />
-            <input name="major" placeholder="Major" onChange={handleChange} />
-            <input name="age" type="number" placeholder="Age" onChange={handleChange} />
-            <input name="interests" placeholder="Interests (comma separated)" onChange={handleChange} />
-            <input name="mentorshipNeeded" placeholder="Mentorship Needed" onChange={handleChange} />
-            <button onClick={findMatches} className="find-matches-button">Find Matches</button>
-          </div>
-        </div>
-        <div style={{ padding: '16px', border: '1px solid', borderRadius: '8px', backgroundColor: 'white', boxShadow: 'md' }}>
-          <h2 style={{ color: '#333' }}>Matches</h2>
-          <div style={{ color: '#555' }}>
-            {matches.length > 0 ? (
-              matches.map((mentor) => (
-                <div key={mentor.id} style={{ padding: '16px', border: '1px solid', borderRadius: '8px', backgroundColor: 'white', boxShadow: 'md' }}>
-                  <h3 style={{ color: '#333' }}>Name:</h3>
-                  <p style={{ color: '#555' }}>{mentor.name}</p>
-                  <h3 style={{ color: '#333' }}>University:</h3>
-                  <p style={{ color: '#555' }}>{mentor.university}</p>
-                  <h3 style={{ color: '#333' }}>Major:</h3>
-                  <p style={{ color: '#555' }}>{mentor.major}</p>
-                  <h3 style={{ color: '#333' }}>Interests:</h3>
-                  <p style={{ color: '#555' }}>{mentor.interests.join(', ')}</p>
-                  <h3 style={{ color: '#333' }}>Mentorship Needed:</h3>
-                  <p style={{ color: '#555' }}>{mentor.mentorshipNeeded}</p>
-                </div>
-              ))
-            ) : (
-              <p style={{ color: '#555' }}>No matches found. Please adjust your search criteria.</p>
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
+    <Box bg="rgb(66, 112, 135)" minHeight="100vh" p={8}>
+      <Flex as="nav" className="navbar" alignItems="center" mb={8} p={4} bg="blue.800" color="white">
+        <Heading as="h1" size="lg" mr={8}>Pier</Heading>
+        <Flex className="navbar-links" flex="1" justifyContent="center" gap={8}>
+          <Text as="span">About</Text>
+          <Text as="span">Resources</Text>
+          <Text as="span">Mentors</Text>
+          <Text as="span">Connect</Text>
+          <Text as="span">Profile</Text>
+        </Flex>
+        <Flex gap={4} ml="auto">
+          <Button colorScheme="whiteAlpha" variant="solid">Sign Up</Button>
+          <Button colorScheme="whiteAlpha" variant="outline">Log In</Button>
+        </Flex>
+      </Flex>
+
+      <Box textAlign="center" color="white" mb={8}>
+        <Heading as="h2" size="xl" mb={4}>MENTORS</Heading>
+      </Box>
+
+      <Box bg="white" p={8} borderRadius="md" maxW="1000px" mx="auto" boxShadow="lg">
+        <Text fontSize="xl" mb={6}>Here are your <b>matches</b>:</Text>
+        <Flex wrap="wrap" gap={8} justifyContent="center">
+          {matches.length > 0 ? (
+            matches.map((mentor) => (
+              <Box key={mentor.id} p={6} border="1px solid #ccc" borderRadius="lg" bg="white" w="250px" boxShadow="md">
+                <Flex mb={4} alignItems="center" justifyContent="space-between">
+                  <Box borderRadius="full" bg="gray.200" h="50px" w="50px"></Box>
+                  <Box>
+                    <Text fontWeight="bold">{mentor.name}</Text>
+                  </Box>
+                  <IconButton
+                    icon={<StarIcon color={starredMentors[mentor.id] ? 'yellow.400' : 'gray.300'} />}
+                    variant="ghost"
+                    onClick={() => toggleStarred(mentor.id)}
+                    aria-label="Star Mentor"
+                  />
+                </Flex>
+                <Box mb={4}>
+                  <Text><b>University:</b> {mentor.university}</Text>
+                  <Text><b>Major:</b> {mentor.major}</Text>
+                  <Text><b>Age:</b> {mentor.age}</Text>
+                  <Text><b>Interests:</b> {mentor.interests.join(', ')}</Text>
+                  <Text><b>Mentorship Needed:</b> {mentor.mentorshipNeeded}</Text>
+                </Box>
+                <Flex justifyContent="space-between" alignItems="center">
+                  <Box as="span" fontSize="lg" fontWeight="bold">Similarity Score:</Box>
+                  <Box as="span" fontSize="lg" fontWeight="bold">{mentor.similarityScore}%</Box>
+                </Flex>
+              </Box>
+            ))
+          ) : (
+            <Text fontSize="lg">No matches found. Please adjust your search criteria.</Text>
+          )}
+        </Flex>
+      </Box>
+    </Box>
   );
 }
 
