@@ -64,6 +64,10 @@
     letter-spacing: -0.05rem;
   }
 
+  .home-link strong {
+    font-weight: 700;
+  }
+
   .logo {
     color: pink;
   }
