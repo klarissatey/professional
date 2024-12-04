@@ -219,3 +219,13 @@ body {
 
 }
 
+.footer-media li {
+  padding: 0.3vw;
+}
+.footer-media {
+  margin-right: 1.5rem;
+}
+
+.footer-logo {
+  margin: 0.2rem;
+}
