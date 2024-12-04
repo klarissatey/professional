@@ -1,17 +1,77 @@
 /* Home.css */
 
-.home-container {
+  .home-container {
     text-align: center;
     padding: 50px;
-    animation: fadeIn 1.5s ease-in;
     background-color: #417087;
+    width: 100%;
   }
   
   @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(-20px); }
     100% { opacity: 1; transform: translateY(0); }
   }
+
+  .slogan {
+    color: #FFF;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Manrope;
+    font-size: 4.2rem;
+    font-style: normal;
+    /* font-weight: 800; */
+    line-height: 150%; /* 6.801rem */
+    letter-spacing: -0.09069rem;
+    padding-top: 8vw;
+  }
   
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    text-align: center;
+    padding: 50px;
+    animation: fadeIn 1.5s ease-in;
+    background-color: #ffffff; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow effect */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    margin-top: 3vw;
+  }
+
+  .home-quote {
+    color: #575757;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Manrope;
+    font-size: 1.7rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 3.75rem */
+    letter-spacing: -0.05rem;
+    padding: 2rem 9rem 2rem 9rem;
+  }
+
+  .home-link {
+    color: #575757;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Manrope;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 327;
+    line-height: 150%; /* 3.75rem */
+    letter-spacing: -0.05rem;
+  }
+
+  .home-link strong {
+    font-weight: 700;
+  }
+
+  .logo {
+    color: pink;
+  }
+
   .get-started-button {
     padding: 10px 20px;
     font-size: 16px;
@@ -28,146 +88,30 @@
     transform: scale(1.05);
   }
 
-/* Global App Styles */
-.App {
-  text-align: center;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
-}
+  .button-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 30vw; 
+    margin-top: 20px; 
+  }
 
-/* Navbar Styles */
-.navbar {
-  background-color: #fff;
-  padding: 0.8rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 10;
-  transition: background-color 0.3s ease;
-}
-
-.navbar-item {
-  color: #333;
-  font-weight: 500;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-.navbar-item:hover {
-  color: #fff;
-  background-color: #61dafb;
-}
-
-/* Logo Styles */
-.logo-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.logo-name {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-}
-
-.logo-catchphrase {
-  font-size: 0.85rem;
-  color: #666;
-}
-
-/* Header Styles */
-.App-header {
-  background-color: #9cc0f0f3;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  margin-top: 4rem; /* For navbar offset */
-}
-
-.header-title {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #333;
-  margin: 0.5rem 0;
-}
-
-.header-subtitle {
-  font-size: 1.5rem;
-  color: #666;
-  margin: 0.5rem 0 2rem 0;
-  max-width: 600px;
-  text-align: center;
-}
-
-/* CTA Button */
-.cta-button {
-  background-color: #61dafb;
-  color: #282c34;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.cta-button:hover {
-  background-color: #4eaed3;
-  transform: scale(1.05);
-}
-
-/* Auth Container Styles */
-.auth-container {
-  max-width: 400px;
-  margin: 5rem auto;
-  padding: 2rem;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.auth-container h2 {
-  color: #282c34;
-  margin-bottom: 1.5rem;
-}
-
-.auth-container input {
-  width: 100%;
-  padding: 0.8rem;
-  margin: 0.5rem 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.auth-button {
-  width: 100%;
-  padding: 0.8rem;
-  background-color: #61dafb;
-  color: #fff;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.auth-button:hover {
-  background-color: #4eaed3;
-}
-
-body {
-  background-color: #000000;
-}
-
+  .home-button-signup {
+    /* display: inline-block; */
+    background-color: #417087; 
+    color: #ffffff; 
+    padding: 23px 20px; /* Inner spacing for the button */
+    font-size: 2rem; /* Font size for the button text */
+    border: none; /* Removes default button border */
+    border-radius: 8px; /* Adds rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* cursor: pointer; 
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    color: #FFF;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Manrope;
+    font-style: normal;
+    line-height: 150%; 
+    letter-spacing: -0.0425rem; */
+  }
   

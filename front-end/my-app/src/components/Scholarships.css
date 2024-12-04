@@ -1,0 +1,210 @@
+.scholarships-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #417087; /* Matches your previous Resources page background */
+    color: white;
+    height: 100vh; /* Full viewport height */
+
+  }
+  
+  /* Title styling */
+  .scholarships-title {
+    color: #5F6368;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Manrope;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 60px */
+letter-spacing: -0.8px;
+text-decoration-line: underline;
+text-decoration-style: solid;
+text-decoration-skip-ink: auto;
+text-decoration-thickness: auto;
+text-underline-offset: auto;
+text-underline-position: from-font;
+
+  }
+  .holder-for-title {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: white; /* White background for the box */
+    padding: 20px; /* Padding inside the box */
+    /* border-radius: 15px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  */
+    max-width: 1200px;
+    width: 90%; /* Adjust width as needed */
+    gap: 20px;
+    align-items: center;
+    border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+margin-top: -150px;
+  }
+  
+  /* Content grid container centered on the page */
+  .scholarships-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto; /* Enables scrolling */
+    max-height: 60vh; /* Adjust height as needed */
+    padding: 10px;
+    gap: 15px;
+    background: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-bottom: -200px;
+  }
+  
+  .scholarship-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #f5f5f5; /* Light gray background for each card */
+    padding: 15px;
+    border-radius: 10px;
+    width: 90%; /* Adjust width as needed */
+    width: 1170px;
+height: 1117px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .scholarship-name {
+    display: flex;
+    color: #000;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Manrope;
+font-size: 39.333px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 59px */
+letter-spacing: -0.787px;
+text-align:left;
+margin-left: 45px;
+  }
+  
+  .scholarship-funded {
+    color: #000;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Manrope;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 30px */
+letter-spacing: -0.4px;
+text-align: left;
+margin-top: -20px;
+margin-left: 45px;
+  }
+  
+  .scholarship-criteria {
+    list-style-type: disc;
+    margin-left: 140px;
+    text-align: left;
+    margin-top: -75px;
+    color: #000;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Manrope;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 30px */
+letter-spacing: -0.4px;
+  }
+  
+  .scholarship-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    color: #333;
+  }
+  
+  .scholarship-worth {
+    color: #000;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Manrope;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 48px */
+letter-spacing: -0.64px;
+text-align: right;
+margin-top: -75px;
+
+  }
+  
+  .scholarship-deadline {
+    color: red; /* Red for the deadline */
+  }
+
+  .image {
+    width: 98px;
+height: 79px;
+flex-shrink: 0;
+margin-top: -85px;
+margin-left: 45px;
+  }
+
+  .scholarship-number {
+    color: #000;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Manrope;
+font-size: 60px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 59px */
+letter-spacing: -0.787px;
+text-align: left;
+margin-top: -35px;
+margin-right: 50px;
+  }
+
+  .scholarship-deadline {
+    color: #FF0004;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Manrope;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 36px */
+letter-spacing: -0.48px;
+text-align: right;
+margin-top: -120px;
+  }
+
+  .apply-button {
+    width: 213px;
+height: 55.274px;
+flex-shrink: 0;
+background-color: #566C74;
+color: #F3F3F3;
+text-align: center;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Manrope;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 30px */
+letter-spacing: -0.4px;
+  }
+
+  .apply-button:hover {
+    background: #0056b3;
+  }
+
+  .button-holder {
+    text-align: right;
+  }
+
+   /* .bi-bookmark-check {
+    font-size: 20px;
+    color: #417087;
+    position: relative;
+    right: 35%;
+    bottom: 250%;
+
+  }  */

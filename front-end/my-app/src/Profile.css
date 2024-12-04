@@ -1,0 +1,33 @@
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #417087;
+    color: white;
+    font: Manrope;
+  }
+  
+  .profile-card {
+    text-align: center;
+    background: white;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 1000px;
+    height: 600px;
+  }
+  
+  .profile-icon {
+    font-size: 150px; /* Large size for the icon */
+    color: #417087; /* Teal color to match the design */
+    margin-bottom: 15px;
+    margin-top: 50px;
+  }
+  
+  h1 {
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin-top: 15px;
+  }
+  

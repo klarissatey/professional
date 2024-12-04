@@ -1,0 +1,146 @@
+/* General Styling */
+body {
+    background-color: #417087; 
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+    overflow-y: scroll; /* Allow vertical scrolling */
+  }
+  
+  /* Resources Container */
+  .resources-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-start; /* Start items from the top */
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Enable scrolling for overflowing content */
+    background-color: #417087;
+    color: white;
+    padding: 20px; /* Add some padding around the content */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+  }
+  
+  /* Title Styling */
+  .resources-title {
+    margin-top: 100px;
+    color: #FFF;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Manrope;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 96px */
+    letter-spacing: -1.28px;
+    text-decoration-line: underline;
+    background-color: #417087; 
+  }
+  
+  /* Card Styling */
+  .resources-card {
+    text-align: center;
+    background: white;
+    margin-top: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 1200px;
+    height: auto;
+  }
+  
+  /* Sections */
+.resources-sections {
+    display: flex;
+    justify-content: space-around; /* Distribute items evenly */
+    align-items: center; /* Align items vertically */
+    margin-top: 20px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  }
+  
+  /* Each resource container */
+  .resource {
+    text-align: center; /* Center text and images */
+    flex: 1;
+    margin: 15px;
+    max-width: 300px; /* Optional: Set a maximum width for consistency */
+  }
+  
+  /* Images */
+  .resource-image {
+    width: 100%; /* Ensure the image scales to fit the container */
+    max-width: 300px; /* Set a maximum width for uniform size */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Scale images to fit within their containers */
+    border-radius: 10px; /* Optional: Add rounded corners for style */
+    margin-bottom: 50px;
+  }
+  
+  
+  .descriptor {
+    width: 100%; /* Adjust to fit within its container */
+    height: auto;
+    color: #5F6368;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Manrope;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: -0.8px;
+    text-decoration-line: underline;
+    margin-top: 10px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline: none;
+    background-color: transparent;
+    outline: none; 
+    background-image: none;
+  }
+
+  .descriptor:hover {
+    color: #417087;
+    transform: scale(1.05);
+  }
+
+  .descriptor:focus {
+    border: none;
+}
+
+  .descriptor-1 {
+    width: 100%; /* Adjust to fit within its container */
+    height: auto;
+    color: #5F6368;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Manrope;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: -0.8px;
+    text-decoration-line: underline;
+    margin-top: -80px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline: none;
+    background-color: transparent;
+    outline: none; 
+    background-image: none;
+  }
+
+
+  .descriptor-1:hover {
+    color: #417087;
+    transform: scale(1.05);
+  }
+
+  .descriptor-1:focus {
+    border: none;
+}
+  

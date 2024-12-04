@@ -7,16 +7,16 @@
 /* Navbar Styles */
 .navbar {
   background: #417087;
-  padding: 0.8rem 2rem;
+  padding: 0.3rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 10;
   transition: background-color 0.3s ease;
   flex-wrap: nowrap;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .navbar-items-container {
@@ -31,13 +31,13 @@
   color: #FFF;
   font-feature-settings: 'liga' off, 'clig' off;
   font-family: Manrope;
-  font-size: 1vw;
+  font-size: 1.15rem;
   font-style: normal;
   font-weight: 700;
   line-height: 150%; /* 36px */
   letter-spacing: -0.48px;
   padding: 0.5rem 1rem;
-  margin: 0.5rem 1rem; 
+  margin-right: 1rem;
 }
 
 .navbar-item:hover {
@@ -46,25 +46,27 @@
 }
 
 .navbar-brand {
-  color: #FFF;
-  text-align: center;
-  font-feature-settings: 'liga' off, 'clig' off;
-  font-family: Roboto;
-  font-size: 3vw;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 150%; /* 129.183px */
-  letter-spacing: --0.108rem;
+  display: flex;
+  align-items: center;
   /* align-items: center; */
 }
 
-.navbar-logo {
-  /* flex-shrink: 0; */
+.navbar-brand span {
+  color: white;
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Roboto;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: --0.108rem;
+  line-height: 1;
 }
 
 .auth-buttons {
   display: flex;
   align-items: center;
+  margin-left: 2vw;
 }
 
 .button-signup {
@@ -208,7 +210,7 @@ body {
   background-color: #2F4550;;
   padding: 100px;
   border-radius: 8px;
-  color: white;
+  color: rgb(255, 255, 255);
   text-align: center;
   
   position: relative;
@@ -217,25 +219,13 @@ body {
 
 }
 
-/* Buttons inside the navy blue box */
-.buttons {
-  margin-top: 40px;
+.footer-media li {
+  padding: 0.3vw;
+}
+.footer-media {
+  margin-right: 1.5rem;
 }
 
-.student-signup, .mentor-signup {
-  background-color: #f0f0f0;
-  color: #1c2d4e;
-  border: none;
-  padding: 30px 50px;
-  margin: 0 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-  margin-left: 30px;
-  margin-bottom: -10 px;
-  font-family: Manrope;
-}
-
-.student-signup:hover, .mentor-signup:hover {
-  background-color: #d0d0d0;
+.footer-logo {
+  margin: 0.2rem;
 }
