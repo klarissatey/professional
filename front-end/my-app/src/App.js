@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
 import { ChakraProvider } from '@chakra-ui/react';
 import Home from './Home';
 import MentorMatch from './MentorMatch';
@@ -9,13 +9,16 @@ import Profile from './Profile';
 import './App.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Resources from './components/Resources';
-import logo from './anchor.png';
+import StudentForm from './StudentForm';
+//import logo from './anchor.png';
 
 function MainContent() {
   const location = useLocation();
 
   return (
+    
     <div className="App">
+      
       <nav className="navbar">
         <Link className="navbar-brand" to="/">
           <svg className="navbar-logo" width="83" height="83" viewBox="0 0 83 83" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
@@ -32,8 +35,8 @@ function MainContent() {
         <div className="navbar-items-container">
           <Link className="navbar-item" to="/about">About</Link>
           <Link className="navbar-item" to="/resources">Resources</Link>
-          <Link className="navbar-item" to="/signin">Mentors</Link>
-          <Link className="navbar-item" to="/signup">Connect</Link>
+          <Link className="navbar-item" to="/mentors">Mentors</Link>
+          <Link className="navbar-item" to="/connect">Connect</Link>
           <Link className="navbar-item" to="/profile">Profile</Link>
         </div>
         <div className="navbar-item auth-buttons">
@@ -43,11 +46,13 @@ function MainContent() {
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/mentor-match" element={<MentorMatch />} />
+        <Route path="/mentors" element={<MentorMatch />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/resources/*" element={<Resources />} /> 
+        <Route path="/student-form" element={<StudentForm />} /> 
+
       </Routes>
       <div class="footer-container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
@@ -93,10 +98,11 @@ function MainContent() {
 
 function App() {
   return (
-    <Router>
-
-      <MainContent />
-    </Router>
+    <ChakraProvider>
+      <Router>
+        <MainContent />
+      </Router>
+    </ChakraProvider>
   );
 }
 

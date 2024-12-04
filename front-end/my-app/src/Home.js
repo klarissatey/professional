@@ -1,103 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css'; // Optional: Import CSS for styling
+import { useNavigate } from 'react-router-dom';
 
 import shipWheel from './ship-wheel.png';
 
 function Home() {
-  const [showSignupForm, setShowSignupForm] = useState(false);
-  const [signupStep, setSignupStep] = useState(0);
-  const [formData, setFormData] = useState({
-    name: '',
-    university: '',
-    major: '',
-    age: '',
-    interests: '',
-    mentorshipNeeded: '',
-  });
   const navigate = useNavigate();
 
-  const handleStudentSignupClick = () => {
-    setShowSignupForm(true);
-    setSignupStep(1);
-  };
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleContinueClick = () => {
-    if (signupStep < 6) {
-      setSignupStep(signupStep + 1);
-    } else {
-      localStorage.setItem('mentorMatchData', JSON.stringify(formData));
-      navigate('/mentors');
-    }
-  };
-
-  const renderSignupStep = () => {
-    switch (signupStep) {
-      case 1:
-        return (
-          <Box>
-            <Progress value={16} height="16px" colorScheme="blue" borderRadius="full" boxShadow="md" mb={4} />
-            <Text fontSize="xl" mb={4}>What's your name?</Text>
-            <Input name="name" placeholder="Type Here" mb={4} onChange={handleInputChange} />
-            <Button bg="rgb(66, 112, 135)" textColor="white" size="lg" onClick={handleContinueClick}>Continue &rsaquo;</Button>
-          </Box>
-        );
-      case 2:
-        return (
-          <Box>
-            <Progress value={32} height="16px" colorScheme="blue" borderRadius="full" boxShadow="md" mb={4} />
-            <Text fontSize="xl" mb={4}>What university do you go to?</Text>
-            <Input name="university" placeholder="Type Here" mb={4} onChange={handleInputChange} />
-            <Button bg="rgb(66, 112, 135)" textColor="white" size="lg" onClick={handleContinueClick}>Continue &rsaquo;</Button>
-          </Box>
-        );
-      case 3:
-        return (
-          <Box>
-            <Progress value={48} height="16px" colorScheme="blue" borderRadius="full" boxShadow="md" mb={4} />
-            <Text fontSize="xl" mb={4}>What major are you?</Text>
-            <Input name="major" placeholder="Type Here" mb={4} onChange={handleInputChange} />
-            <Button bg="rgb(66, 112, 135)" textColor="white" size="lg" onClick={handleContinueClick}>Continue &rsaquo;</Button>
-          </Box>
-        );
-      case 4:
-        return (
-          <Box>
-            <Progress value={64} height="16px" colorScheme="blue" borderRadius="full" boxShadow="md" mb={4} />
-            <Text fontSize="xl" mb={4}>How old are you?</Text>
-            <Input name="age" placeholder="Type Here" mb={4} onChange={handleInputChange} />
-            <Button bg="rgb(66, 112, 135)" textColor="white" size="lg" onClick={handleContinueClick}>Continue &rsaquo;</Button>
-          </Box>
-        );
-      case 5:
-        return (
-          <Box>
-            <Progress value={80} height="16px" colorScheme="blue" borderRadius="full" boxShadow="md" mb={4} />
-            <Text fontSize="xl" mb={4}>What are your interests?</Text>
-            <Input name="interests" placeholder="Type Here" mb={4} onChange={handleInputChange} />
-            <Button bg="rgb(66, 112, 135)" textColor="white" size="lg" onClick={handleContinueClick}>Continue &rsaquo;</Button>
-          </Box>
-        );
-      case 6:
-        return (
-          <Box>
-            <Progress value={100} height="16px" colorScheme="blue" borderRadius="full" boxShadow="md" mb={4} />
-            <Text fontSize="xl" mb={4}>What do you need mentorship in?</Text>
-            <Input name="mentorshipNeeded" placeholder="Type Here" mb={4} onChange={handleInputChange} />
-            <Button bg="rgb(66, 112, 135)" textColor="white" size="lg" onClick={handleContinueClick}>Finish &rsaquo;</Button>
-          </Box>
-        );
-      default:
-        return null;
-    }
-  };
-
-  return (
+  const handleSignUp = () => {
+    navigate('/student-form');
+    };  
+    
+    return (
     <div className="home-container">
       <div className="slogan">
       <svg width="101" height="91" viewBox="0 0 101 91" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
@@ -119,8 +34,8 @@ function Home() {
         <img src={shipWheel} alt="ship wheel"></img>
         <div className="home-link">Click <strong>below</strong> to set sail!</div>
         <div className="button-container">
-          <button className="home-button-signup" type="button" to="/signup"><strong>Student</strong> Sign Up</button>
-          <button className="home-button-signup" type="button" to="/signup"><strong>Mentor</strong> Sign Up</button>
+          <button className="home-button-signup" type="button" onClick={handleSignUp}><strong>Student</strong> Sign Up</button>
+          <button className="home-button-signup"  type="button" to="/signup"><strong>Mentor</strong> Sign Up</button>
         </div>
         
       </div>
@@ -128,4 +43,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Home; 
