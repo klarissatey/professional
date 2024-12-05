@@ -11,6 +11,10 @@ function Home() {
   const handleSignUp = () => {
     navigate('/student-form');
     };  
+  
+    const handleMentorSignUp = () => {
+      navigate('/mentor-form');
+    }
     
     return (
     <div className="home-container">
@@ -35,7 +39,7 @@ function Home() {
         <div className="home-link">Click <strong>below</strong> to set sail!</div>
         <div className="button-container">
           <button className="home-button-signup" type="button" onClick={handleSignUp}><strong>Student</strong> Sign Up</button>
-          <button className="home-button-signup"  type="button" to="/signup"><strong>Mentor</strong> Sign Up</button>
+          <button className="home-button-signup"  type="button" onClick={handleMentorSignUp}><strong>Mentor</strong> Sign Up</button>
         </div>
         
       </div>

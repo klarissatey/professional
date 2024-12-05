@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Box, Text, Input, Button, Progress } from '@chakra-ui/react';
 
-function StudentForm() {
+function MentorSignupForm() {
   const [signupStep, setSignupStep] = useState(1);
   const [formData, setFormData] = useState({
     name: '',
     university: '',
-    major: '',
-    age: '',
-    interests: '',
-    mentorshipNeeded: '',
+    fieldOfExpertise: '',
+    experienceYears: '',
+    hobbies: '',
+    mentorshipOffered: '',
   });
 
   const navigate = useNavigate();
@@ -24,7 +24,7 @@ function StudentForm() {
     if (signupStep < 6) {
       setSignupStep(signupStep + 1);
     } else {
-      localStorage.setItem('mentorMatchData', JSON.stringify(formData));
+      localStorage.setItem('mentorSignupData', JSON.stringify(formData));
       navigate('/mentors');
     }
   };
@@ -32,23 +32,31 @@ function StudentForm() {
   const renderSignupStep = () => {
     const steps = [
       { question: "What's your name?", name: 'name', progress: 16 },
-      { question: 'What high school do you go to?', name: 'university', progress: 32 },
-      { question: 'What major do you want to be?', name: 'major', progress: 48 },
-      { question: 'How old are you?', name: 'age', progress: 64 },
-      { question: 'What are your interests?', name: 'interests', progress: 80 },
-      { question: 'What do you need mentorship in?', name: 'mentorshipNeeded', progress: 100 },
+      { question: 'Which university did/do you attend?', name: 'university', progress: 32 },
+      { question: 'What is your field of expertise?', name: 'fieldOfExpertise', progress: 48 },
+      { question: 'How many years of experience do you have?', name: 'experienceYears', progress: 64 },
+      { question: 'What are your hobbies?', name: 'hobbies', progress: 80 },
+      { question: 'What mentorship can you offer?', name: 'mentorshipOffered', progress: 100 },
     ];
 
     const { question, name, progress } = steps[signupStep - 1];
 
     return (
       <Box>
-        <Progress value={progress} height="16px" colorScheme="transparent" bg="transparent" borderRadius="full" boxShadow="md" mb={8}
-        sx={{
-          '& > div[role="progressbar"]': {
-            backgroundColor: 'rgb(66, 112, 135)', // Apply color to filled portion
-          },
-        }} />
+        <Progress
+          value={progress}
+          height="16px"
+          colorScheme="transparent"
+          bg="transparent"
+          borderRadius="full"
+          boxShadow="md"
+          mb={8}
+          sx={{
+            '& > div[role="progressbar"]': {
+              backgroundColor: 'rgb(66, 112, 135)', // Apply color to filled portion
+            },
+          }}
+        />
         <Text fontSize="xl" color={'black'} mb={4}>{question}</Text>
         <Input name={name} color={'black'} placeholder="Type Here" mb={4} onChange={handleInputChange} />
         <Button bg="rgb(66, 112, 135)" textColor="white" size="lg" onClick={handleContinueClick}>
@@ -67,4 +75,4 @@ function StudentForm() {
   );
 }
 
-export default StudentForm;
+export default MentorSignupForm;

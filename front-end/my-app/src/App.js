@@ -10,6 +10,7 @@ import './App.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Resources from './components/Resources';
 import StudentForm from './StudentForm';
+import MentorSignupForm from './MentorForm';
 //import logo from './anchor.png';
 
 function MainContent() {
@@ -52,6 +53,8 @@ function MainContent() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/resources/*" element={<Resources />} /> 
         <Route path="/student-form" element={<StudentForm />} /> 
+        <Route path="/mentor-form" element={<MentorSignupForm />} /> 
+
 
       </Routes>
       <div class="footer-container">
