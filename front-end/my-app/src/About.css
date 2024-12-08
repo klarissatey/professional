@@ -1,0 +1,44 @@
+.about-container {
+    text-align: center;
+    padding: 50px;
+    /* padding-top: 16vw; */
+    margin-top: 6vw;
+    padding-bottom: 11vw;
+    background-color: #417087;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+    font-family: Manrope;
+    font-weight: 600;
+
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    text-align: center;
+    padding: 50px;
+    /* background-color: #ffffff;  */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); Optional: Adds a shadow effect */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    margin-top: 3vw;
+}
+
+.about-text {
+    color: white;
+    text-align: left;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Manrope;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%; /* 3.75rem */
+    /* letter-spacing: -0.05rem; */
+    padding: 0 13rem;
+}
