@@ -11,10 +11,10 @@ import "./ChatPage.css";
 
 let initialMessages = [
   {
-    text: "Hello from John! This is a longer message to test word wrapping and ensure it displays correctly.",
+    text: "Hello, I'm Alice! Nice to meet you! I will be your personalized mentor so how can I help?",
     user: {
       id: "john",
-      name: "John Doe",
+      name: "Alice",
     },
   },
   {
@@ -27,9 +27,9 @@ let initialMessages = [
 ];
 
 const chats = [
-  { id: 1, name: "John Doe", lastMessageTime: "10:30 AM" },
+  { id: 1, name: "Alice Doe", lastMessageTime: "10:30 AM" },
   { id: 2, name: "Jane Smith", lastMessageTime: "11:00 AM" },
-  { id: 3, name: "Alice Johnson", lastMessageTime: "11:30 AM" },
+  { id: 3, name: "Charlie Hudson", lastMessageTime: "11:30 AM" },
   { id: 4, name: "Bob Brown", lastMessageTime: "12:00 PM" },
 ];
 

@@ -3,9 +3,9 @@ import "./ChatPage.css";
 import Sidebar from "./Sidebar";
 
 const dummyMessages = {
-  1: ["Hello from John!", "How are you?"],
+  1: ["Hello from Alice!", "How are you?"],
   2: ["Hi from Jane!", "What's up?"],
-  3: ["Hey from Alice!", "Long time no see!"],
+  3: ["Hey from Charlie!", "Long time no see!"],
   4: ["Hello from Bob!", "How's it going?"],
 };
 
