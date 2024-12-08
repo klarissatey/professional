@@ -1,17 +1,82 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Link,
+  useLocation,
+} from "react-router-dom";
 import { ChakraProvider } from '@chakra-ui/react';
-import Home from './Home';
-import MentorMatch from './MentorMatch';
-import SignIn from './SignIn';
-import SignUp from './SignUp';
+import Home from "./Home";
+import MentorMatch from "./MentorMatch";
+import SignIn from "./SignIn";
+import SignUp from "./SignUp";
 import Profile from './Profile';
-import './App.css';
+import "./App.css";
+import ChatMain from "./chat-page/ChatMain";
+import ChatPage from "./chat-page/ChatPage"; // Import the new ChatPage component
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Resources from './components/Resources';
 import StudentForm from './StudentForm';
 import MentorSignupForm from './MentorForm';
-import PierLogo from './PierLogoWhite.png';
+import PierLogo from "./PierLogoWhite.png";
+
+const myColorSet = {
+  // input
+  "--input-background-color": "#FF0000",
+  "--input-text-color": "#fff",
+  "--input-element-color": "rgb(0, 0, 255)",
+  "--input-attach-color": "#fff",
+  "--input-send-color": "#fff",
+  "--input-placeholder-color": "rgb(255, 255, 255)",
+
+  // message header
+  "--message-header-background-color": "#FF0000",
+  "--message-header-text-color": "#fff",
+  "--message-header-last-active-color": "rgb(0, 0, 255)",
+  "--message-header-back-color": "rgb(255, 255, 255)",
+
+  // chat list header
+  "--chatlist-header-background-color": "#FF0000",
+  "--chatlist-header-text-color": "rgb(255, 255, 255)",
+  "--chatlist-header-divider-color": "rgb(0, 128, 0)",
+
+  //chatlist
+  "--chatlist-background-color": "rgb(255, 192, 203)",
+  "--no-conversation-text-color": "rgb(255, 255, 255)",
+
+  //chat item
+  "--chatitem-background-color": "rgb(0, 0, 255)",
+  "--chatitem-selected-background-color": "rgb(255, 255, 0)",
+  "--chatitem-title-text-color": "#FF0000",
+  "--chatitem-content-text-color": "#FF0000",
+  "--chatitem-hover-color": "#FF0000",
+
+  //main container
+  "--container-background-color": "rgb(255, 192, 203)",
+
+  //loader
+  "--loader-color": "rgb(0, 128, 0)",
+
+  //message list
+  "--messagelist-background-color": "rgb(0, 0, 255)",
+  "--no-message-text-color": "rgb(255, 255, 255)",
+
+  // incoming message
+  "--incoming-message-text-color": "rgb(255, 255, 255)",
+  "--incoming-message-name-text-color": "rgb(255, 255, 255)",
+  "--incoming-message-background-color": "rgb(0, 128, 0)",
+  "--incoming-message-timestamp-color": "rgb(255, 255, 255)",
+  "--incoming-message-link-color": "#FF0000",
+
+  //outgoing message
+  "--outgoing-message-text-color": "#FF0000",
+  "--outgoing-message-background-color": "rgb(255, 255, 0)",
+  "--outgoing-message-timestamp-color": "#FF0000",
+  "--outgoing-message-checkmark-color": "#FF0000",
+  "--outgoing-message-loader-color": "#FF0000",
+  "--outgoing-message-link-color": "rgb(0, 128, 0)",
+};
 
 function MainContent() {
   const location = useLocation();
@@ -32,8 +97,12 @@ function MainContent() {
           <Link className="navbar-item" to="/profile">Profile</Link>
         </div>
         <div className="navbar-item auth-buttons">
-          <button className="navbar-item button-signup" type="button" to="/signup">Sign Up</button>
-          <button className="navbar-item button-login" type="button" to="/signin">Log In</button>
+          <Link className="navbar-item button-signup" to="/signup">
+            Sign Up
+          </Link>
+          <Link className="navbar-item button-login" to="/signin">
+            Log In
+          </Link>
         </div>
       </nav>
       <Routes>
@@ -47,6 +116,8 @@ function MainContent() {
         <Route path="/mentor-form" element={<MentorSignupForm />} /> 
 
 
+        <Route path="/chat" element={<ChatPage />} />{" "}
+        {/* Use the new ChatPage component */}
       </Routes>
       <div class="footer-container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
