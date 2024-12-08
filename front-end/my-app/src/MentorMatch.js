@@ -87,31 +87,33 @@ function MentorMatch() {
         <Flex wrap="wrap" gap={8} justifyContent="center">
           {matches.length > 0 ? (
             matches.map((mentor) => (
-              <Box key={mentor.id} p={6} border="1px solid #ccc" borderRadius="lg" bg="white" w="250px" boxShadow="md">
-                <Flex mb={4} alignItems="center" justifyContent="space-between">
-                  <Box borderRadius="full" bg="gray.200" h="50px" w="50px"></Box>
-                  <Box>
-                    <Text fontWeight="bold">{mentor.name}</Text>
+              <Link to={`/chat`}>
+                <Box p={6} border="1px solid #ccc" borderRadius="lg" bg="white" w="250px" boxShadow="md">
+                  <Flex mb={4} alignItems="center" justifyContent="space-between">
+                    <Box borderRadius="full" bg="gray.200" h="50px" w="50px"></Box>
+                    <Box>
+                      <Text fontWeight="bold">{mentor.name}</Text>
+                    </Box>
+                    <IconButton
+                      icon={<StarIcon color={starredMentors[mentor.id] ? 'yellow.400' : 'gray.300'} />}
+                      variant="ghost"
+                      onClick={() => toggleStarred(mentor.id)}
+                      aria-label="Star Mentor"
+                    />
+                  </Flex>
+                  <Box mb={4}>
+                    <Text><b>University:</b> {mentor.university}</Text>
+                    <Text><b>Major:</b> {mentor.major}</Text>
+                    <Text><b>Age:</b> {mentor.age}</Text>
+                    <Text><b>Interests:</b> {mentor.interests.join(', ')}</Text>
+                    <Text><b>Mentorship Needed:</b> {mentor.mentorshipNeeded}</Text>
                   </Box>
-                  <IconButton
-                    icon={<StarIcon color={starredMentors[mentor.id] ? 'yellow.400' : 'gray.300'} />}
-                    variant="ghost"
-                    onClick={() => toggleStarred(mentor.id)}
-                    aria-label="Star Mentor"
-                  />
-                </Flex>
-                <Box mb={4}>
-                  <Text><b>University:</b> {mentor.university}</Text>
-                  <Text><b>Major:</b> {mentor.major}</Text>
-                  <Text><b>Age:</b> {mentor.age}</Text>
-                  <Text><b>Interests:</b> {mentor.interests.join(', ')}</Text>
-                  <Text><b>Mentorship Needed:</b> {mentor.mentorshipNeeded}</Text>
+                  <Flex justifyContent="space-between" alignItems="center">
+                    <Box as="span" fontSize="lg" fontWeight="bold">Similarity Score:</Box>
+                    <Box as="span" fontSize="lg" fontWeight="bold">{mentor.similarityScore}%</Box>
+                  </Flex>
                 </Box>
-                <Flex justifyContent="space-between" alignItems="center">
-                  <Box as="span" fontSize="lg" fontWeight="bold">Similarity Score:</Box>
-                  <Box as="span" fontSize="lg" fontWeight="bold">{mentor.similarityScore}%</Box>
-                </Flex>
-              </Box>
+              </Link>
             ))
           ) : (
             <Text fontSize="lg">No matches found. Please adjust your search criteria.</Text>

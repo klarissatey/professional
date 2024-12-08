@@ -118,8 +118,7 @@ function MainContent() {
         <Route path="/mentor-form" element={<MentorSignupForm />} /> 
 
 
-        <Route path="/chat" element={<ChatPage />} />{" "}
-        {/* Use the new ChatPage component */}
+        <Route path="/chat" element={<ChatPage />} />
       </Routes>
       <div class="footer-container" className="footer">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
