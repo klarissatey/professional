@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const mentorsData = [
   { id: 1, name: 'Alice Doe', university: 'UT Austin', major: 'Computer Science', age: 22, interests: ['AI', 'Web Development'], mentorshipNeeded: 'career guidance' },
-  { id: 2, name: 'Bob Springer', university: 'UT Austin', major: 'Business', age: 24, interests: ['Consulting', 'Business Analytics'], mentorshipNeeded: 'Case Prep' },
+  { id: 2, name: 'Bob Johnson', university: 'UT Austin', major: 'Business Analytics', age: 24, interests: ['AI', 'Web Development'], mentorshipNeeded: 'career guidance' },
   { id: 3, name: 'Charlie Hudson', university: 'Stanford', major: 'Computer Science', age: 21, interests: ['Machine Learning', 'Data Science'], mentorshipNeeded: 'career guidance' },
   { id: 4, name: 'Dana', university: 'UCLA', major: 'Mechanical Engineering', age: 23, interests: ['CAD', 'Product Design'], mentorshipNeeded: 'career guidance' },
   { id: 5, name: 'Eve', university: 'UC Berkeley', major: 'Mathematics', age: 25, interests: ['Statistics', 'Cryptography'], mentorshipNeeded: 'research guidance' },
