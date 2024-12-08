@@ -28,10 +28,10 @@ body {
     font-family: Manrope;
     font-size: 64px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 150%; /* 96px */
     letter-spacing: -1.28px;
-    text-decoration-line: underline;
+    /* text-decoration-line: underline; */
     background-color: #417087; 
   }
   
@@ -82,7 +82,7 @@ body {
     text-align: center;
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: Manrope;
-    font-size: 40px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 700;
     line-height: 150%;

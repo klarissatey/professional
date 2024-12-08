@@ -219,13 +219,33 @@ body {
 
 }
 
+footer {
+  background-color: #417087;
+}
+
 .footer-media li {
   padding: 0.3vw;
 }
 .footer-media {
-  margin-right: 1.5rem;
+  margin-right: 1.7rem;
 }
 
 .footer-logo {
-  margin: 0.2rem;
+  /* margin: 0.2rem; */
+  /* align-items:baseline; */
+  margin-left: 1.7em;
+  display: inline-flex; /* Ensures inline alignment of items */
+  align-items: baseline;
+}
+
+.footer-logo svg {
+  vertical-align: baseline;
+  /* padding: ; */
+  margin: 0 0.2rem;
+}
+
+.footer-logo a {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: baseline;
 }
