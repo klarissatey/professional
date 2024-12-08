@@ -12,6 +12,7 @@ import MentorMatch from "./MentorMatch";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 import Profile from './Profile';
+import About from './About';
 import "./App.css";
 import ChatMain from "./chat-page/ChatMain";
 import ChatPage from "./chat-page/ChatPage"; // Import the new ChatPage component
@@ -107,6 +108,7 @@ function MainContent() {
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/mentors" element={<MentorMatch />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
@@ -119,12 +121,12 @@ function MainContent() {
         <Route path="/chat" element={<ChatPage />} />{" "}
         {/* Use the new ChatPage component */}
       </Routes>
-      <div class="footer-container">
+      <div class="footer-container" className="footer">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
-          <div class="col-md-4 d-flex align-items-center">
-            <span class="mb-3 mb-md-0 text-light">&copy; 
+          <div class="col-md-4 d-flex align-items-center" className="footer-logo">
+            <span class="mb-3 mb-md-0 text-light"> &copy;
               <a href="/" class="mb-3 me-2 mb-md-0 text-body text-decoration-none lh-1">
-                <svg className="footer-logo" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                   <rect width="23" height="23" fill="url(#pattern0_161_1489)"/>
                   <defs>
                   <pattern id="pattern0_161_1489" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -134,7 +136,7 @@ function MainContent() {
                   </defs>
                 </svg>
               </a>
-              2024 Pier
+               2024 Pier
             </span>
           </div>
 
