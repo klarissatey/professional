@@ -22,12 +22,15 @@ function StudentForm() {
 
   const handleContinueClick = () => {
     if (signupStep < 6) {
+      // Move to the next step
       setSignupStep(signupStep + 1);
     } else {
+      // Store the form data and navigate to the next page
       localStorage.setItem('mentorMatchData', JSON.stringify(formData));
       navigate('/mentors');
     }
   };
+  
 
   const renderSignupStep = () => {
     const steps = [
@@ -44,13 +47,20 @@ function StudentForm() {
     return (
       <Box>
         <Progress value={progress} height="16px" colorScheme="transparent" bg="transparent" borderRadius="full" boxShadow="md" mb={8}
-        sx={{
-          '& > div[role="progressbar"]': {
-            backgroundColor: 'rgb(66, 112, 135)', // Apply color to filled portion
-          },
-        }} />
+          sx={{
+            '& > div[role="progressbar"]': {
+              backgroundColor: 'rgb(66, 112, 135)', 
+            },
+          }} />
         <Text fontSize="xl" color={'black'} mb={4}>{question}</Text>
-        <Input name={name} color={'black'} placeholder="Type Here" mb={4} onChange={handleInputChange} />
+        <Input 
+          name={name} 
+          color={'black'} 
+          placeholder={"Type Here"}  
+          mb={4} 
+          onChange={handleInputChange} 
+          value={formData[name]}  
+        />
         <Button bg="rgb(66, 112, 135)" textColor="white" size="lg" onClick={handleContinueClick}>
           {signupStep === 6 ? 'Finish' : 'Continue'}
         </Button>
