@@ -10,7 +10,7 @@
 
 .chat-sidebar {
   width: 25%;
-  background-color: #3e4c59; /* Dark background for sidebar */
+  background-color: #417087; /* Dark background for sidebar */
   color: #ffffff; /* White text for sidebar */
   padding: 1rem;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -20,6 +20,7 @@
   margin-top: 0;
   color: #ffffff; /* White text for title */
   font-size: 1.5rem;
+  font-family: "Manrope", sans-serif;
 }
 
 .chat-list {
@@ -55,6 +56,7 @@
 .chat-time {
   font-size: 0.8rem;
   color: #b0bec5; /* Lighter gray for time */
+  font-family: "Manrope", sans-serif;
 }
 
 .main-container {

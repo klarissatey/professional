@@ -9,6 +9,8 @@ const mentorsData = [
   { id: 3, name: 'Charlie Hudson', university: 'Stanford', major: 'Computer Science', age: 21, interests: ['Machine Learning', 'Data Science'], mentorshipNeeded: 'career guidance' },
   { id: 4, name: 'Dana', university: 'UCLA', major: 'Mechanical Engineering', age: 23, interests: ['CAD', 'Product Design'], mentorshipNeeded: 'career guidance' },
   { id: 5, name: 'Eve', university: 'UC Berkeley', major: 'Mathematics', age: 25, interests: ['Statistics', 'Cryptography'], mentorshipNeeded: 'research guidance' },
+  { id: 6, name: 'Alice', university: 'UT Austin', major: 'Neuroscience', age: 22, interests: ['Sustainability', 'Medicine'], mentorshipNeeded: 'college prep' },
+  { id: 7, name: 'Charlie', university: 'UT Dallas', major: 'Biology', age: 18, interests: ['Research' , 'Sustainability', 'Medicine'], mentorshipNeeded: 'college prep' },
 ];
 
 function MentorMatch() {
@@ -28,7 +30,6 @@ function MentorMatch() {
 
   const findMatches = (data) => {
     const interestsArray = data.interests.split(',').map(interest => interest.trim());
-
     const matchedMentors = mentorsData.map(mentor => {
       let score = 0;
       if (mentor.university === data.university) score++;
@@ -53,7 +54,7 @@ function MentorMatch() {
   return (
     <Box bg="rgb(66, 112, 135)" minHeight="100vh" p={8}>
       <Box textAlign="center" color="white" mb={8}>
-        <Heading as="h2" size="xl" mb={4}>MENTORS</Heading>
+        <Heading as="h2" size="xl" mb={4} marginTop="20">Mentors</Heading>
       </Box>
 
       <Box bg="white" p={8} borderRadius="md" maxW="1000px" mx="auto" boxShadow="lg">
